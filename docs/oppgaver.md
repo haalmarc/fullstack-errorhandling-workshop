@@ -24,7 +24,7 @@ Markeringene følger de andre workshopene:
    `start/backend/BeerEndpoints.cs`. Følg det vellykkede kallet til
    `BeerService.Create` og `shared/backend/BeerDatabase.cs`.
 
-**💡 Reflekter kort:** Hva er beviset for at ølet er lagret? Når tømmes skjemaet?
+**💡 Refleksjon:** Hva er beviset for at ølet er lagret? Når tømmes skjemaet?
 
 ## 1. Feltfeil gjennom hele kjeden
 
@@ -50,6 +50,8 @@ return Results.ValidationProblem(errors,
 Prøv tomt navn igjen. Kontroller **400**, `application/problem+json` og
 `errors.name`. UI-et skal nå vise en generell feil, og beholde alkohol og type.
 Dere har rettet én konkret feil allerede. Regler og skjema er ferdige fra før.
+
+**💡 Refleksjon:** Hva er forskjellen på denne løsningen versus det som var? Er det fortsatt noe som mangler?
 
 ### 👉 1b. Ta med feltinformasjonen til React
 
@@ -81,7 +83,7 @@ tallfelt. Rett feilene og send inn. Innholdet skal beholdes ved feil, første
 feilfelt skal få fokus, gammel feil skal forsvinne ved ny innsending og et
 gyldig øl skal lagres. `clearErrors` og `reset` på suksess finnes allerede.
 
-**💡 Reflekter:** Hvem kan rette disse feilene? Hva skjer om en annen klient
+**💡 Refleksjon:** Hvem kan rette disse feilene? Hva skjer om en annen klient
 hopper over React-valideringen? Hvorfor er `errors` en utvidelse av Problem
 Details og ikke et standardfelt i RFC-en?
 
@@ -89,7 +91,7 @@ Details og ikke et standardfelt i RFC-en?
 [RFC 9457 §3](https://www.rfc-editor.org/rfc/rfc9457.html#section-3),
 [RHF setError](https://react-hook-form.com/docs/useform/seterror).
 
-## 2. Duplikat er en forventet domenefeil · 20 minutter
+## 2. Duplikat er en forventet domenefeil
 
 **Mål:** Tolke én kjent databasefeil og gjøre den nyttig for brukeren.
 
@@ -128,14 +130,14 @@ feltkobling som validering. Ikke innfør tekstsøk etter «allerede» i klienten
 **👉 Prøv igjen:** `Kodepils`, så ` kodepils `. Begge skal gi feil ved navnefeltet,
 beholde alle verdier og la dere velge et nytt navn og lykkes.
 
-**💡 Reflekter:** Kan en «finnes navnet?»-sjekk før INSERT garantere unikhet når to
+**💡 Refleksjon:** Kan en «finnes navnet?»-sjekk før INSERT garantere unikhet når to
 forespørsler kommer samtidig? Hvorfor skal ikke alle `SqliteException` bli 409?
 
 **📖 Støtte og lesestoff:** [Løsningsforslag 2](losningsforslag.md#2-duplikat),
 [SQLite 2067](https://www.sqlite.org/rescode.html#constraint_unique),
 [HTTP 409](https://www.rfc-editor.org/rfc/rfc9110.html#section-15.5.10).
 
-## 3. Uventet feil og riktig ansvar · 25–30 minutter
+## 3. Uventet feil og riktig ansvar
 
 **Mål:** Brukeren får en trygg melding; utvikleren får tekniske detaljer og en
 referanse som faktisk kan slås opp.
@@ -189,7 +191,7 @@ brukertekst. Behold alle feltverdier.
 **👉 Prøv igjen:** Utløs serverfeilen. Kopier referansen fra UI-et og finn loggen.
 Velg «Ingen» i panelet og send samme skjema. Prøv duplikat og validering igjen.
 
-**💡 Reflekter:** Hvilket lag kan faktisk tolke navnekonflikten? Hva kan brukeren
+**💡 Refleksjon:** Hvilket lag kan faktisk tolke navnekonflikten? Hva kan brukeren
 gjøre med en intern databasefeil? Når gir en lokal catch mening? Hva er
 kostnaden ved å logge samme exception i flere lag?
 
@@ -197,7 +199,7 @@ kostnaden ved å logge samme exception i flere lag?
 [ASP.NET IExceptionHandler og .NET 10-diagnostikk](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/error-handling?view=aspnetcore-10.0#iexceptionhandler),
 [RFC 9457 §5](https://www.rfc-editor.org/rfc/rfc9457.html#section-5).
 
-## 4. Når kontrakten ikke kommer fram · 15–20 minutter
+## 4. Når kontrakten ikke kommer fram
 
 **Mål:** Ingen feilrespons skal føre til stille feil, tapt innhold eller falsk
 kvittering.
@@ -230,7 +232,7 @@ gjenkjennes, eller noen feltnavn er ukjente, vis også en felles fallback.
 Alle feil skal beholde navn, type og alkohol, og knappen skal bli tilgjengelig
 igjen. Ingen feil skal gi «Ølet er registrert».
 
-**💡 Reflekter:** Betyr manglende svar at ølet ikke ble lagret? Hvorfor er det
+**💡 Refleksjon:** Betyr manglende svar at ølet ikke ble lagret? Hvorfor er det
 tryggere å si «Vi fikk ikke bekreftet registreringen» enn «Ingenting er lagret»?
 Det finnes et eget debugvalg for dette i fordypningen.
 
@@ -241,8 +243,7 @@ Det finnes et eget debugvalg for dette i fordypningen.
 
 Prøv én gyldig registrering og én av hver feiltype. Forklar for hverandre hvem
 som må gjøre noe: brukeren, systemet eller begge. Velg deretter én
-[fordypning](fordypning.md). Det er helt greit å bruke neste arbeidsøkt på å
-fullføre kjernen. [Løsningsforslaget](losningsforslag.md#ved-ulik-progresjon) gir
+[fordypning](fordypning.md). [Løsningsforslaget](losningsforslag.md#ved-ulik-progresjon) gir
 konkrete snarveier hvis gruppa vil prioritere én side.
 
 ### 💡 Større drøftinger
