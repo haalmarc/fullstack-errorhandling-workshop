@@ -51,7 +51,9 @@ Dere trenger bare å kjøre startvarianten for å gjøre hovedoppgavene.
 - **Editor:** VS Code anbefales som felles valg; repoet foreslår C#-utvidelsen
   (`ms-dotnettools.csharp`) når mappen åpnes. C# Dev Kit er valgfritt; sjekk
   lisensvilkårene for bedriftsbruk. Rider er et godt alternativ for den som
-  bruker JetBrains til vanlig.
+  bruker JetBrains til vanlig. I Rider eller Visual Studio åpner dere
+  `start/Start.slnx`. Løsningsforslaget har sin egen `losningsforslag/Losningsforslag.slnx`,
+  slik at dere ikke kjører eller redigerer feil variant ved et uhell.
 - **Nettleserens utviklerverktøy:** Network-fanen (Fetch/XHR og Offline) brukes
   i nesten alle oppgavene.
 - **Debugger:** Se [debugging av backend](docs/oppstart.md#debugging-av-backend).
