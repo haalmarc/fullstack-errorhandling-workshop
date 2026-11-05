@@ -109,8 +109,12 @@ catch-blokken. Fang `SqliteException` bare når
 `new DuplicateBeerException(exception)`. Typen og gjenkjenningen er ferdige i
 `shared/`; legg til `using Microsoft.Data.Sqlite;`.
 
+C# har exception-filtre, som Java mangler: `catch (SqliteException exception) when
+(BeerDatabase.IsBeerNameConflict(exception))` fanger bare når betingelsen er sann.
+
 Prøv igjen. Endepunktets brede catch gir fortsatt 500, men innholdet i feilen
-har endret seg. Følg exception-typen fra tjenesten med debuggeren.
+har endret seg. Følg exception-typen fra tjenesten med debuggeren
+([slik starter dere den](oppstart.md#debugging-av-backend)).
 
 ### 👉 2b. Gi domenekonflikten HTTP 409
 
@@ -159,6 +163,12 @@ Prøv duplikat igjen. Det skal fortsatt være en feltfeil. Tjenesten skal ikke
 logge og kaste videre samme feil uten å tilføre noe.
 
 ### 👉 3b. Flytt fallback til en sentral handler
+
+Dette er det største steget i workshopen. Det er helt greit å kopiere
+handleren og registreringen fra løsningsforslaget og bruke tiden på å forstå
+hvorfor de ser slik ut: hvem eier loggingen, og hvorfor står fallback sentralt?
+For Spring-utviklere tilsvarer `IExceptionHandler` omtrent `@RestControllerAdvice`,
+og `UseExceptionHandler()` en plass tidlig i filterkjeden.
 
 Opprett `start/backend/UnexpectedExceptionHandler.cs` med `IExceptionHandler`.
 Bruk [løsningsforslagets handler](../losningsforslag/backend/UnexpectedExceptionHandler.cs) som

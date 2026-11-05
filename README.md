@@ -8,7 +8,7 @@ Målet er å skille mellom det brukeren kan rette, og det systemet må ta ansvar
 
 ## Start her
 
-Åpne `errorhandling-workshop` i editoren. Følg først
+Åpne repomappen (`fullstack-errorhandling-workshop`) i editoren. Følg først
 [installasjonssjekken](docs/oppstart.md#før-samlingen-omtrent-fem-minutter).
 Kjør deretter programmet fra denne mappen i to terminaler:
 
@@ -32,6 +32,31 @@ oppgave 1a, i `start/backend/BeerEndpoints.cs`.
 Dere jobber i **`start/`**. **`losningsforslag/`** inneholder en ferdig løsning
 dere kan sammenligne med, og **`shared/`** inneholder ferdige deler begge bruker.
 Dere trenger bare å kjøre startvarianten for å gjøre hovedoppgavene.
+
+## Arbeidsform
+
+- **Én maskin per gruppe.** Gruppa på 2–3 personer koder sammen på én maskin,
+  helst koblet til en stor skjerm. Oppgavene følger én feil gjennom hele kjeden,
+  og diskusjonen er en stor del av utbyttet.
+- **Bytt hvem som taster per feiltype.** Én taster, de andre navigerer. La gjerne
+  den som kjenner laget minst, taste: frontendutvikleren på C#-oppgavene og
+  backendutvikleren på React-oppgavene.
+- **Alle installerer likevel.** Følg [oppstarten](docs/oppstart.md) på egen maskin
+  før samlingen, slik at gruppa har en reserve og alle kan prøve selv etterpå.
+- **Løsningsforslaget er lov.** Bruk det når dere står fast. Målet er å forstå
+  ansvarsfordelingen, ikke å skrive all koden selv.
+
+## Verktøy
+
+- **Editor:** VS Code anbefales som felles valg; repoet foreslår C#-utvidelsen
+  (`ms-dotnettools.csharp`) når mappen åpnes. C# Dev Kit er valgfritt; sjekk
+  lisensvilkårene for bedriftsbruk. Rider er et godt alternativ for den som
+  bruker JetBrains til vanlig.
+- **Nettleserens utviklerverktøy:** Network-fanen (Fetch/XHR og Offline) brukes
+  i nesten alle oppgavene.
+- **Debugger:** Se [debugging av backend](docs/oppstart.md#debugging-av-backend).
+  I VS Code kan begge serverne også startes med oppgaven
+  *Workshop: start backend og frontend*.
 
 ## Materialet
 

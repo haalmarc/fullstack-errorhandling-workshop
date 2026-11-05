@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Backend (start) med debugger",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Backend: bygg (start)",
+      "program": "${workspaceFolder}/start/backend/bin/Debug/net10.0/Brewery.Api.dll",
+      "cwd": "${workspaceFolder}/start/backend",
+      "env": { "ASPNETCORE_ENVIRONMENT": "Development" },
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    },
+    {
+      "name": "Backend (løsningsforslag) med debugger",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Backend: bygg (løsningsforslag)",
+      "program": "${workspaceFolder}/losningsforslag/backend/bin/Debug/net10.0/Brewery.Api.dll",
+      "cwd": "${workspaceFolder}/losningsforslag/backend",
+      "env": { "ASPNETCORE_ENVIRONMENT": "Development" },
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    },
+    {
+      "name": "Koble til kjørende backend (dotnet watch)",
+      "type": "coreclr",
+      "request": "attach",
+      "processId": "${command:pickProcess}"
+    }
+  ]
+}

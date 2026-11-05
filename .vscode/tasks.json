@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Workshop: start backend og frontend",
+      "dependsOn": ["Backend: dotnet watch (start)", "Frontend: npm run dev"],
+      "dependsOrder": "parallel",
+      "problemMatcher": []
+    },
+    {
+      "label": "Backend: dotnet watch (start)",
+      "type": "shell",
+      "command": "dotnet watch --project start/backend run --no-launch-profile -- --environment Development",
+      "isBackground": true,
+      "presentation": { "group": "workshop", "panel": "dedicated" },
+      "problemMatcher": {
+        "owner": "workshop-backend",
+        "pattern": { "regexp": "^__ingen_treff__$" },
+        "background": { "beginsPattern": "dotnet watch", "endsPattern": "Now listening on|Application started" }
+      }
+    },
+    {
+      "label": "Frontend: npm run dev",
+      "type": "shell",
+      "command": "npm run dev",
+      "isBackground": true,
+      "presentation": { "group": "workshop", "panel": "dedicated" },
+      "problemMatcher": {
+        "owner": "workshop-frontend",
+        "pattern": { "regexp": "^__ingen_treff__$" },
+        "background": { "beginsPattern": "VITE", "endsPattern": "ready in|Local:" }
+      }
+    },
+    {
+      "label": "Backend: bygg (start)",
+      "type": "shell",
+      "command": "dotnet build start/backend",
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Backend: bygg (løsningsforslag)",
+      "type": "shell",
+      "command": "dotnet build losningsforslag/backend",
+      "problemMatcher": "$msCompile"
+    }
+  ]
+}
