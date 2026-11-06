@@ -39,7 +39,7 @@ ugyldige verdier; her velges ASP.NETs standard 400 for å holde kjernen liten.
   "title": "Vi kunne ikke behandle forespørselen.",
   "status": 500,
   "detail": "Dette skyldes en feil hos oss. Innholdet i skjemaet er beholdt.",
-  "traceId": "ea688b6f41a663fb9926e522fdbb5421a"
+  "traceId": "ea688b6f41a663fb9926e522fdbb5421"
 }
 ```
 

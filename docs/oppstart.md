@@ -1,6 +1,7 @@
 # Oppstart
 
-Alle kommandoer kjøres fra `errorhandling-workshop`, med mindre annet er angitt.
+Alle kommandoer kjøres fra repomappen (`fullstack-errorhandling-workshop`), med
+mindre annet er angitt.
 Åpne denne mappen i editoren; `shared/` må følge med arbeidskopien.
 
 **Her skal dere jobbe:** `start/backend` og `start/frontend` er arbeidskoden.
@@ -13,7 +14,9 @@ under; dere trenger ikke kjøre løsningsforslaget for å gjøre oppgavene.
 Installer **.NET SDK 10.0** (ikke bare runtime), **Node.js 24 LTS** og **npm 10
 eller nyere**. Node 26 støttes også. `global.json` tillater stabile SDK-er i
 10.0-serien fra 10.0.100; `.nvmrc` velger Node 24 hvis dere bruker nvm.
-En moderne nettleser med utviklerverktøy er nok til oppgavene.
+En moderne nettleser med utviklerverktøy er nok til oppgavene. Installer også en
+editor med C#-støtte og debugger, for eksempel VS Code med C#-utvidelsen eller
+Rider. Se [verktøy](../README.md#verktøy).
 
 ```sh
 dotnet --version
@@ -52,6 +55,26 @@ innsending**, som sjekker at startkoden fungerer. En gyldig registrering skal
 allerede kunne lagres og vises i listen. Første kodeendring er i **oppgave 1a**, i
 `start/backend/BeerEndpoints.cs`. Frontendendringene kommer deretter i
 `start/frontend/api.ts` og `start/frontend/useRegistration.ts`.
+
+**Sjekk før samlingen:** Kjør startkoden som beskrevet under, og lagre én gyldig
+registrering (oppgave 0). Start også backend én gang med debuggeren og treff et
+breakpoint. Da gjenstår ingen installasjon på selve dagen.
+
+## Debugging av backend
+
+Backend kjører normalt under `dotnet watch`, som ikke er koblet til en debugger.
+Det finnes to måter å debugge på i VS Code (Run and Debug, F5):
+
+1. **Start backend med debugger:** Stopp `dotnet watch` først (samme port, 5050).
+   Velg *Backend (start) med debugger*. Den bygger og starter backend i
+   Development med samme database. Etter kodeendringer: stopp og start på nytt.
+2. **Koble til kjørende backend:** La `dotnet watch` kjøre og velg
+   *Koble til kjørende backend (dotnet watch)*. Velg prosessen som heter
+   `Brewery.Api`. Etter en omstart i watch må dere koble til på nytt.
+
+Alternativ 1 er enklest å forstå; alternativ 2 lar dere beholde automatisk
+omlasting. I Rider: bruk *Attach to Process* tilsvarende, eller kjør prosjektet
+med debug.
 
 ## Hvis det åpne API-et er nede eller blokkert
 
