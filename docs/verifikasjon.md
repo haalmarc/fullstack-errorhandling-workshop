@@ -67,36 +67,3 @@ Prosjektene bruker nå eksplisitt `SQLitePCLRaw.bundle_e_sqlite3` **3.0.5** og
 | Gyldig skjema + Offline | Generell fallback, beholdt innhold, aktiv knapp etterpå |
 | Slå av feilen, rett verdier, send på nytt | Innsending lykkes; gammel feil er borte |
 | Lagre, så bryt; oppdater listen | Fallback selv om ølet faktisk ble lagret (fordypning) |
-
-## Ikke verifisert med mennesker ennå
-
-### Oppstart på en annen maskin
-
-La en kollega med fersk arbeidskopi følge bare [oppstart.md](oppstart.md).
-Prøv gjerne Windows eller Linux, siden teknisk kjøring hittil er gjort på
-macOS. Noter:
-
-- Faktisk versjon av SDK, Node og npm, og tid fra start til gyldig innsending.
-- Om `dotnet watch` og omstart ved C#-endringer er forståelig.
-- Om offentlig pakkekilde og SampleAPIs er tilgjengelige fra jobbnettverket.
-- Automatisk databaseopprettelse, startdata, restart uten datatap og begge
-  nullstillingsmåtene.
-- Om overgangen til lokal datamodus og til løsningsforslaget fungerer uten muntlig hjelp.
-
-En lokal bygg- eller nettlesertest dokumenterer ikke denne opplevelsen.
-
-### Progresjon i en representativ kodegruppe
-
-La 2–3 personer med blandet React-/backendfordypning prøve materialet uten
-forhåndsforklaring. Observer særlig:
-
-- Får de til første responsendring raskt, og forstår de forskjellen før/etter?
-- Klarer de å koble `errors.name` til feltet uten å lære React Hook Form først?
-- Kan de forklare validering kontra duplikat før de går videre?
-- Er overgangen fra lokale catch-blokker til handleren for stor i ett steg?
-- Bruker de tiden på feilhåndtering framfor skjema, verktøy og aliasoppsett?
-- Hvor langt kommer de etter 45, 60, 90 og 120 minutter? Når bruker de løsningsforslaget?
-
-Noter steder de stopper, uventet tidsbruk og hva de faktisk kan forklare etterpå.
-Juster terskelen i oppgave 1 og antall delsteg ut fra dette. Tidsanslagene er
-foreløpige. Gruppene trenger ikke fullføre alt for å få et godt læringsutbytte.

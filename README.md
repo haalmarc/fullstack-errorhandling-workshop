@@ -73,7 +73,7 @@ Dere trenger bare å kjøre startvarianten for å gjøre hovedoppgavene.
 | [Feilkontrakt](docs/kontrakt.md) | HTTP, Problem Details og feltkobling. |
 | [Fordypning](docs/fordypning.md) | Lokalisering, innlasting, eksterne feil, retry og sporing. |
 | [Kilder og API-valg](docs/kilder.md) | Primærkilder og vurdering av ekstern tjeneste. |
-| [Verifikasjon](docs/verifikasjon.md) | Tekniske sjekker og utprøving som fortsatt gjenstår. |
+| [Verifikasjon](docs/verifikasjon.md) | Tekniske sjekker. |
 
 Sett av omtrent 85–100 minutter til kjernen, med rom til å bruke resten av de
 120 praktiske minuttene på å fullføre eller velge fordypning. Dette er et anslag,
