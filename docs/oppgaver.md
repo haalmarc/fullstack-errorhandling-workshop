@@ -2,13 +2,9 @@
 
 Jobb i `start/`. [Oppstarten](oppstart.md) skal være gjennomført. Åpne
 Network-panelet i nettleseren, velg Fetch/XHR og behold backendterminalen synlig.
-Det er lov å bruke [løsningsforslaget](losningsforslag.md) underveis. Bytt gjerne hvem som
-taster mellom feiltypene.
+Det er lov å bruke [løsningsforslaget](losningsforslag.md) underveis. Oppgavene er beregna å gjøres i grupper på 2-3 personer, så bytt hvem som taster underveis.
 
-Hver bokstav er én liten endring. Prøv etter hvert steg, også før hele kjeden
-er ferdig. Anslåtte tider inkluderer utprøving og korte refleksjoner.
-
-Markeringene følger de andre workshopene:
+Emojiene gir tegn på type informasjon:
 
 - 👉 Oppgave: Gjør endringen eller prøv oppførselen.
 - 💡 Refleksjon: Diskuter hva dere observerer og hvorfor.
@@ -16,7 +12,7 @@ Markeringene følger de andre workshopene:
 
 ## 👉 0. Finn en fungerende innsending
 
-**Mål:** Se kjeden før dere endrer den.
+**Mål:** Se flyten før dere endrer den.
 
 1. Registrer `Terminalstout`, Stout, 5,2 %. Finn POST `/api/beers` i Network.
 2. Se status, respons og `Location`. Finn ølet i listen.

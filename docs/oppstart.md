@@ -2,7 +2,6 @@
 
 Alle kommandoer kjøres fra repomappen (`fullstack-errorhandling-workshop`), med
 mindre annet er angitt.
-Åpne denne mappen i editoren; `shared/` må følge med arbeidskopien.
 
 **Her skal dere jobbe:** `start/backend` og `start/frontend` er arbeidskoden.
 `losningsforslag/` er en ferdig løsning til sammenligning, og `shared/` er
@@ -14,7 +13,7 @@ under; dere trenger ikke kjøre løsningsforslaget for å gjøre oppgavene.
 Installer **.NET SDK 10.0** (ikke bare runtime), **Node.js 24 LTS** og **npm 10
 eller nyere**. Node 26 støttes også. `global.json` tillater stabile SDK-er i
 10.0-serien fra 10.0.100; `.nvmrc` velger Node 24 hvis dere bruker nvm.
-En moderne nettleser med utviklerverktøy er nok til oppgavene. Installer også en
+Installer også en
 editor med C#-støtte og debugger, for eksempel VS Code med C#-utvidelsen eller
 Rider. Se [verktøy](../README.md#verktøy).
 
@@ -24,11 +23,6 @@ node --version
 npm --version
 npm ci
 ```
-
-Første installasjon trenger tilgang til npmjs.org og nuget.org. `NuGet.Config`
-bruker kun den offentlige kilden, slik at private pakkekilder fra jobboppsett
-ikke krever innlogging. SQLite-biblioteket leveres av NuGet-pakkene.
-Backendpakkene er versjonsfestet i prosjektfilene; npm bruker `package-lock.json`.
 
 ## Kjør startkoden
 
@@ -56,9 +50,7 @@ allerede kunne lagres og vises i listen. Første kodeendring er i **oppgave 1a**
 `start/backend/BeerEndpoints.cs`. Frontendendringene kommer deretter i
 `start/frontend/api.ts` og `start/frontend/useRegistration.ts`.
 
-**Sjekk før samlingen:** Kjør startkoden som beskrevet under, og lagre én gyldig
-registrering (oppgave 0). Start også backend én gang med debuggeren og treff et
-breakpoint. Da gjenstår ingen installasjon på selve dagen.
+
 
 ## Debugging av backend
 
@@ -144,7 +136,7 @@ Startkode viser med vilje interne feildetaljer. Kjør den lokalt i workshopen.
 Debugpanelet er kun med i Vites utviklingsmodus, og backend ignorerer
 feilsimulering og skjuler reset-endepunktet utenfor Development.
 
-## For arrangøren: Teknisk sjekk før utdeling
+## Teste at alt fungerer
 
 Stopp manuelle servere før nettlesertestene:
 
@@ -176,5 +168,3 @@ For å bekrefte ekte eksterne kall gjennom backend:
 ```sh
 npm run check:api -- --live
 ```
-
-Før samlingen må noen fortsatt følge denne veiledningen på en annen maskin.
