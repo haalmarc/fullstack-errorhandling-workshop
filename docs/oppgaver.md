@@ -56,7 +56,7 @@ Dere har rettet én konkret feil allerede. Regler og skjema er ferdige fra før.
 ### 👉 1b. Ta med feltinformasjonen til React
 
 I `start/frontend/api.ts`: Lag en liten `ApiProblem extends Error` som bærer
-HTTP-status og en Problem Details-body. I grenen `!response.ok`, les JSON og
+HTTP-status og en Problem Details-body. Hvis `response.ok` er `false`, les JSON og
 kast `ApiProblem`. Bruk typen og klassen fra
 [`losningsforslag/frontend/api.ts`](../losningsforslag/frontend/api.ts) som støtte.
 
@@ -76,7 +76,7 @@ typen `urn:brewery:problem:validation`, knytt `errors` til de kjente feltene
 Begynn med `name`. Bruk `{ type: 'server', message: ... }`, og
 `{ shouldFocus: true }` for første felt. JSX for visning, `aria-invalid` og
 `aria-describedby` er allerede koblet opp i `shared/frontend/App.tsx`.
-Utvid så til alle tre feltene. Ikke kall `reset` i feilgrenen.
+Utvid så til alle tre feltene. Ikke kall `reset` hvis registreringen feiler.
 
 **👉 Prøv igjen:** Tomt navn, deretter navn `Testøl` og alkohol 21. Prøv også tomt
 tallfelt. Rett feilene og send inn. Innholdet skal beholdes ved feil, første
